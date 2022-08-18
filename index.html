@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="show-img">
+        <span id="close" onclick="closeImg()">X</span>
+        <img src="image/img1.jpg" class="first-img" alt="img1" id="fullImg">
+    </div>
+    <div class="img-gallery" id="all-img">
+        <img src="image/img1.jpg" alt="img1" onclick="openfullImg(this.src)">
+        <img src="image/img2.jpg" alt="img2" onclick="openfullImg(this.src)">
+        <img src="image/img3.jpg" alt="img3" onclick="openfullImg(this.src)">
+        <img src="image/img4.jpg" alt="img4" onclick="openfullImg(this.src)">
+        <img src="image/img5.jpg" alt="img5" onclick="openfullImg(this.src)">
+        <img src="image/img6.jpg" alt="img6" onclick="openfullImg(this.src)">
+        <img src="image/img7.jpg" alt="img7" onclick="openfullImg(this.src)">
+        <img src="image/img8.jpg" alt="img8" onclick="openfullImg(this.src)">
+    </div>
+    <script>
+        const showimg = document.getElementById("show-img");
+        const fullImg = document.getElementById("fullImg");
+        function openfullImg(pic){
+            showimg.style.display = 'flex';
+            fullImg.src = pic;
+        }
+        function closeImg(){
+            showimg.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
